@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Algerian Forest Fire Prediction</title>
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+text-align:center;
+}
+
+.container{
+background:white;
+padding:25px;
+margin:auto;
+margin-top:40px;
+width:400px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+input{
+width:90%;
+padding:8px;
+margin:6px;
+}
+
+button{
+padding:10px 20px;
+background:#28a745;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Forest Fire Prediction</h2>
+
+<form action="/" method="post">
+
+<input type="number" step="any" name="Temp" placeholder="Temperature (22-42)" required>
+
+<input type="number" step="any" name="RH" placeholder="Relative Humidity (21-90)" required>
+
+<input type="number" step="any" name="Ws" placeholder="Wind Speed (6-29)" required>
+
+<input type="number" step="any" name="Rain" placeholder="Rain (0-16.8)" required>
+
+<input type="number" step="any" name="FFMC" placeholder="FFMC (28.6-92.5)" required>
+
+<input type="number" step="any" name="DMC" placeholder="DMC (1.1-65.9)" required>
+
+
+
+<input type="number" step="any" name="ISI" placeholder="ISI (0-18.5)" required>
+
+<input type="number" step="any" name="Classes" placeholder="Classes (1.1-68)" required>
+
+<input type="number" step="any" name="Region" placeholder="Region (0-31.1)" required>
+
+<br><br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+{% if result %}
+<h3>Prediction: {{ result }}</h3>
+<h3>Fire Risk: {{ risk }}</h3>
+{% endif %}
+
+</div>
+
+</body>
+</html>

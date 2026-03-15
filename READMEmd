@@ -1,0 +1,104 @@
+# Algerian Forest Fire Prediction 🔥
+
+## Project Overview
+
+This project predicts the **Fire Weather Index (FWI)** using weather and environmental features from the **Algerian Forest Fire Dataset**.
+
+A **Machine Learning model (Ridge Regression)** is trained and deployed using **Flask** to allow users to input environmental data and receive fire risk predictions.
+
+---
+
+## Dataset
+
+The dataset contains **weather and fuel information** collected from two regions in Algeria.
+
+Features used:
+
+* Temperature
+* Relative Humidity (RH)
+* Wind Speed (Ws)
+* Rain
+* FFMC
+* DMC
+* ISI
+* Classes
+* Region
+
+Target variable:
+
+* **FWI (Fire Weather Index)**
+
+---
+
+## Technologies Used
+
+* Python
+* Scikit-learn
+* NumPy
+* Pandas
+* Flask
+* HTML / CSS
+
+---
+
+## Project Structure
+
+```
+machine_learning_project
+│
+├── dataset
+├── models
+│   ├── scaler.pkl
+│   └── ridge.pkl
+├── notebook
+├── templates
+│   └── home.html
+├── app.py
+├── requirement.txt
+└── README.md
+```
+
+---
+
+## How to Run the Project
+
+1. Clone the repository
+
+```
+git clone <repo-link>
+```
+
+2. Install dependencies
+
+```
+pip install -r requirement.txt
+```
+
+3. Run the Flask application
+
+```
+python app.py
+```
+
+4. Open browser
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## Output
+
+The system predicts:
+
+* **FWI Value**
+* **Fire Risk Level (Low / Moderate / High / Extreme)**
+
+---
+
+## Future Improvements
+
+* Use better models (Random Forest, XGBoost)
+* Improve UI
+* Deploy on cloud (Render / AWS / Heroku)
